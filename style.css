@@ -1,0 +1,113 @@
+* {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;  
+}
+
+body {
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100vh;
+}
+
+.card {
+    background-color: #a5a5a5b5;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 20px auto;
+    width: 430px;
+}
+
+.card__image {
+    height: fit-content;
+    width: fit-content;
+    position: relative;
+
+    image-rendering: optimizeQuality;
+    image-resolution: 300dpi;
+}
+
+.card__content {
+    padding: 20px 30px;
+    text-align: center;
+}
+
+.card__name {
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.card__description {
+    color: #454242;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+.card__links {
+    display: flex;
+    justify-content: space-around;
+    /* flex-direction: column; */
+    margin-bottom: 20px;
+}   
+
+.card__link {
+    color: #333;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.card__link:hover {
+    color: #e91e63;
+}
+
+.footer__link {
+    color: #6b6b6b;
+    padding-top: 25px;
+    font-size: 14px;
+    line-height: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer__link:hover {
+    color: #e91e63;
+}
+
+/* Now lets make it responsie */
+
+@media screen and (max-width: 500px) {
+    body {
+        background-position: center;
+    }
+
+    .card {
+        width: 95%;
+    }
+
+    .card__image {
+        height: fit-content;
+        width: fit-content;
+    }
+
+    .card__links {
+        flex-direction: column;
+    }
+
+    .card__link {
+        margin-bottom: 10px;
+    }
+
+    .card__content {
+        padding: 20px 10px;
+    }
+}
